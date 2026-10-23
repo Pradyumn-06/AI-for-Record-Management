@@ -104,4 +104,5 @@ Future Improvements
 - Export and backup tools
 - Audit logs and duplicate-record detection
 License
-No license has been specified yet. Add a license before distributing the project publicly.
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.

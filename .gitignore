@@ -1,4 +1,5 @@
 .venv/
+<<<<<<< HEAD
 __pycache__/
 *.pyc
 uploads/
@@ -7,3 +8,13 @@ uploads/
 *.sqlite3
 .idea/
 static/*.mp4
+=======
+venv/
+__pycache__/
+*.py[cod]
+.idea/
+.env
+uploads/*
+!uploads/.gitkeep
+instance/
+>>>>>>> 11587646048f91833bae027e7b6c93aa77134fe3

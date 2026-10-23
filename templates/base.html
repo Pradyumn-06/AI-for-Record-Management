@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}AI Record Management{% endblock %}</title>
+<style>
+:root{--primary:#b3121f;--accent:#d4a017;--bg:#fbf6ec;--muted:#6b7280;--border:#eadfc8}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:#1e2433;line-height:1.6}
+nav{background:linear-gradient(135deg,var(--primary),var(--accent));padding:0 30px;display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .brand{font-weight:700;font-size:1.15rem;color:#fff;text-decoration:none}
+nav .links a{color:#fff;text-decoration:none;margin-left:22px}
+main{max-width:1100px;margin:35px auto;padding:0 20px}
+.card{background:#fff;border-radius:16px;padding:30px;box-shadow:0 4px 24px rgba(30,36,51,.07);border:1px solid var(--border)}
+.subtitle{color:var(--muted)}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border:0;padding:12px 26px;border-radius:10px;font-size:1rem;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.secondary{background:#fff;color:var(--primary);border:2px solid var(--primary)}
+.badge{display:inline-block;padding:3px 12px;border-radius:999px;font-size:.8rem;font-weight:600;background:#fdf0c9;color:#b3121f}
+</style>
+{% block head %}{% endblock %}
+</head>
+<body>
+<nav>
+<a class="brand" href="/">&#128193; AI Record Management</a>
+<div class="links"><a href="/">Home</a><a href="/upload">Upload</a><a href="/records">Records</a></div>
+</nav>
+<main>
+{% block content %}{% endblock %}
+</main>
+</body>
+</html>

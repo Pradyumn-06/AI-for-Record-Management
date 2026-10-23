@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome - AI Record Management</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#c4111d;--bright:#ff1f2d}
+body{font-family:"Segoe UI",Arial,sans-serif;background:#000;color:#fff}
+.hero{position:relative;height:100vh;min-height:600px;overflow:hidden;background:radial-gradient(ellipse at 50% 30%,#7a0a12 0%,#2a0307 55%,#000 100%)}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.shade{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 40%,rgba(0,0,0,.85) 100%)}
+nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:24px 48px}
+.brand{font-family:Impact,"Arial Black",sans-serif;font-size:1.7rem;letter-spacing:.08em;color:#fff;text-decoration:none;text-shadow:3px 3px 0 var(--red)}
+.links{display:flex;align-items:center;gap:30px}
+.links a{color:#fff;text-decoration:none;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.9}
+.links a:hover{color:var(--bright)}
+.links a.outline{border:2px solid var(--red);padding:9px 24px}
+.copy{position:absolute;z-index:4;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;padding:0 20px}
+.greet{display:inline-block;background:var(--red);padding:6px 20px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;margin-bottom:18px;transform:skew(-8deg)}
+.copy h1{font-family:Impact,"Arial Black",sans-serif;font-size:clamp(2.6rem,8vw,6rem);line-height:1.05;text-transform:uppercase;text-shadow:5px 5px 0 var(--red),9px 9px 0 #000}
+.tag{letter-spacing:.3em;font-size:.8rem;text-transform:uppercase;margin:18px 0 30px}
+.cta{display:inline-block;font-family:Impact,"Arial Black",sans-serif;font-size:1.2rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#fff;background:var(--red);border:3px solid #000;padding:13px 40px;box-shadow:6px 6px 0 #000;transform:skew(-6deg);transition:.12s}
+.cta:hover{background:var(--bright);transform:skew(-6deg) translate(-2px,-2px);box-shadow:9px 9px 0 #000}
+.more{display:block;margin-top:16px;color:#fff;opacity:.85;font-size:.85rem}
+.sound{position:absolute;z-index:5;right:30px;bottom:26px;background:rgba(0,0,0,.6);color:#fff;border:2px solid var(--red);padding:8px 16px;cursor:pointer;letter-spacing:.12em;text-transform:uppercase;font-size:.75rem}
+.features{background:#000;padding:70px 8% 60px;border-top:4px solid var(--red)}
+.features h2{text-align:center;font-family:Impact,"Arial Black",sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:2rem;margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1100px;margin:auto}
+.feature{background:#111;border:2px solid var(--red);padding:24px;box-shadow:6px 6px 0 var(--red)}
+.feature h3{margin-bottom:8px;color:var(--bright);text-transform:uppercase;letter-spacing:.06em}
+.feature p{opacity:.8;font-size:.95rem}
+footer{text-align:center;padding:24px;opacity:.6;font-size:.85rem;background:#000}
+@media(max-width:800px){nav{padding:18px 20px}.links a:not(.outline){display:none}}
+</style></head>
+<body>
+<section class="hero">
+<video id="bg" autoplay muted loop playsinline>
+<source src="/static/deadpool.mp4" type="video/mp4">
+</video>
+<div class="shade"></div>
+<nav>
+<a class="brand" href="/">AI RECORDS</a>
+<div class="links"><a href="/">Home</a><a href="/upload">Upload</a><a href="/records">Records</a><a class="outline" href="/upload">Get Started</a></div>
+</nav>
+<div class="copy">
+<div class="greet" id="greeting">Welcome</div>
+<h1>AI for Record<br>Management</h1>
+<div class="tag">Upload &middot; Classify &middot; Search</div>
+<a class="cta" href="/upload">Upload a Document</a>
+<a class="more" href="/records">or view existing records</a>
+</div>
+<button class="sound" id="snd" type="button">Sound off</button>
+</section>
+<section class="features">
+<h2>What it does</h2>
+<div class="grid">
+<div class="feature"><h3>OCR Extraction</h3><p>Reads text from scanned PDFs and images.</p></div>
+<div class="feature"><h3>AI Classification</h3><p>Sorts records into receipts, invoices, certificates and more.</p></div>
+<div class="feature"><h3>Department and Date</h3><p>Finds the owning department and dates.</p></div>
+<div class="feature"><h3>Searchable Records</h3><p>Search any record by its content.</p></div>
+</div>
+</section>
+<footer>AI-powered document classification, OCR and search</footer>
+<script>
+var h=new Date().getHours();
+var t=h<12?"Good morning":h<17?"Good afternoon":"Good evening";
+document.getElementById("greeting").textContent=t+"! Welcome to";
+var v=document.getElementById("bg"),b=document.getElementById("snd");
+b.addEventListener("click",function(){v.muted=!v.muted;b.textContent=v.muted?"Sound off":"Sound on";});
+</script>
+</body></html>

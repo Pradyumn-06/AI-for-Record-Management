@@ -1,4 +1,4 @@
-AI for Record Management
+AI for Record Management, 
 An AI-powered web application built with Python and Flask to simplify digital record management. The project is designed to help users upload, organize, and retrieve records, with AI-assisted text extraction from supported documents.
 Features
 - Record uploads: Upload supported documents through a web interface.
